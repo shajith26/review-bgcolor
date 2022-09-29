@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="header">
+        <button id="btn">change color</button>
+    </div>
+    <div class="header">
+        <div class="banner" id="banner">
+            <input type="text" id="input"><button id="btn2">done</button>
+        </div>
+    
+    </div>
+
+    <script>
+
+        let btn=document.getElementById("btn");
+       
+        function shajith(){
+            let bgcolor=document.getElementsByClassName("header")[0];
+            var change=Math.ceil(Math.random()*256).toString();
+            bgcolor.style.backgroundColor="#"+change;
+        }
+        btn.addEventListener("click",shajith);
+
+
+
+        var input=document.getElementById("input");
+        var banner=document.getElementById("banner");
+        let btn2=document.getElementById("btn2");
+        let now="";
+        function inn(){
+            now=input.value;
+            banner.style.backgroundColor=now;
+        }
+        btn2.addEventListener("click",inn);
+    </script>
+</body>
+</html>
